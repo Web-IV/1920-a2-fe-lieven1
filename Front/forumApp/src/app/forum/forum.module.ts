@@ -15,7 +15,7 @@ import { AuthGuard } from '../user/auth.guard';
 const routes: Routes = [
   { path: 'forum/list', component: ForumListComponent },
   { path: 'follow/list', component: FollowListComponent },
-  { path: 'forum/add', canActivate:[AuthGuard], component: AddForumComponent },
+  /*{ path: 'forum/add', canActivate:[AuthGuard], component: AddForumComponent },*/
   { path: 'forum/detail/:id', component: ForumDetailComponent
     ,resolve: { forum: ForumResolver }
   }
@@ -24,6 +24,6 @@ const routes: Routes = [
 @NgModule({
   declarations: [PostComponent, ForumListComponent, AddForumComponent, ForumDetailComponent, AddPostComponent, FollowListComponent],
   imports: [CommonModule, MaterialModule, ReactiveFormsModule, RouterModule.forChild(routes)],
-  exports: [ForumListComponent, FollowListComponent, AddForumComponent]
+  exports: [ForumListComponent, FollowListComponent/*, AddForumComponent*/]
 })
 export class ForumModule { }

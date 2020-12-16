@@ -18,7 +18,7 @@ export class AddPostComponent implements OnInit {
 
   ngOnInit(): void {
     this.post = this.fb.group({
-      content: ['content']
+      content: ['']
     });
   }
 
